@@ -42,6 +42,15 @@ export default class Server {
 
             // Aquí se crearán todos los eventos
 
+            // console.log({id_socket: cliente.id});
+
+            // Conectar cliente
+            socket.conectarCliente(cliente);
+            
+            // Configurar usuario
+            socket.configurarUsuario( cliente, this.io );
+
+            
             console.log('Cliente conectado');
 
             // Mensajes
@@ -49,6 +58,7 @@ export default class Server {
 
             // Desconectar
             socket.desconectar( cliente );
+
 
         });
 
